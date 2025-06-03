@@ -7,7 +7,6 @@ public class SinglyLinkedList {
 
     public Student addStudent(int roll_no, String name, char div) {
         Student student = new Student();
-
         student.name = name;
         student.roll_No = roll_no;
         student.div = div;
@@ -28,6 +27,24 @@ public class SinglyLinkedList {
             System.out.println(currentStudent.roll_No + "   " + currentStudent.name + "   " + currentStudent.div + "    "+ currentStudent.hashCode()   );
             currentStudent = currentStudent.next;
         }
+    }
+
+    public Student deleteStudent(int roll){
+        Student currentStudent = this.head;
+        Student previousStudent = null;
+        while (currentStudent != null) {
+            if (currentStudent.roll_No == roll) {
+                if (previousStudent == null) {
+                    this.head = currentStudent.next;
+                } else {
+                    previousStudent.next = currentStudent.next;
+                }
+                return currentStudent;
+            }
+            previousStudent = currentStudent;
+            currentStudent = currentStudent.next;
+        }
+        return currentStudent;
     }
 
 }

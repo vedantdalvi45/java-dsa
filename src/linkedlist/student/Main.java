@@ -2,7 +2,6 @@ package linkedlist.student;
 
 public class Main {
 
-
     public static void main(String[] args) {
         SinglyLinkedList linkedList = new SinglyLinkedList();
         linkedList.addStudent(1,"Ajay",'c');
@@ -11,6 +10,8 @@ public class Main {
 
         linkedList.printList();
 
-    }
+        System.out.println("Deleted Student : "+ linkedList.deleteStudent(2).name);
 
+        linkedList.printList();
+    }
 }
