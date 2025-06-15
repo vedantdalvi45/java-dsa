@@ -12,7 +12,7 @@ public class SinglyLinkedList {
         student.div = div;
         if (size == 0) {
             head = student;
-        } else
+        } else   
             this.tail.next = student;
 
         student.next = null;
@@ -24,7 +24,7 @@ public class SinglyLinkedList {
     public void printList() {
         Student currentStudent = this.head;
         while (currentStudent != null) {
-            System.out.println(currentStudent.roll_No + "   " + currentStudent.name + "   " + currentStudent.div + "    "+ currentStudent.hashCode()   );
+            System.out.println(currentStudent.roll_No + "   " + currentStudent.name + "   " + currentStudent.div + "    "+ currentStudent +"    "+currentStudent.next  );
             currentStudent = currentStudent.next;
         }
     }
@@ -39,6 +39,7 @@ public class SinglyLinkedList {
                 } else {
                     previousStudent.next = currentStudent.next;
                 }
+                size--;
                 return currentStudent;
             }
             previousStudent = currentStudent;
