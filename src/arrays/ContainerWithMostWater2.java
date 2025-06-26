@@ -1,8 +1,6 @@
-package LeetCode;
+package arrays;
 
-import java.util.Collections;
-
-public class ContainerWithMostWater {
+public class ContainerWithMostWater2 {
     public void maxArea(int[] height) {
         int areaOfWater = 0;
         int temp = 0;
@@ -20,6 +18,6 @@ public class ContainerWithMostWater {
 
     }
     public static void main(String[] args) {
-        new ContainerWithMostWater().maxArea(new int[] {1,8,6,2,5,4,8,3,7});
+        new ContainerWithMostWater2().maxArea(new int[] {1,8,6,2,5,4,8,3,7});
     }
 }
